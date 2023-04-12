@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title> Profile Nguyen Ngoc Lan Anh</title>
+</head>
+
+<body>
+   <div class="container">
+    <div class="icon-social">
+        <a target="_blank" href="https://www.facebook.com/bornthisloo/"><i class="fab fa-facebook" ></i></a>
+        <a target="_blank" href="https://www.instagram.com/24thg1_/"><i class="fab fa-instagram" ></i></a>
+        <a target="_blank" href="https://github.com/anhsobanh"><i class="fab fa-github" ></i></a>
+    </div>
+    <img src="profile.jpg" alt="">
+    <h1>Nguyễn Ngọc Lan Anh</h1>
+    <h5>Xuân Đỉnh, Bắc Từ Liêm, Hà Nội</h5>
+    <p></p>
+    <p>Thực tập sinh Frontend Developer</p>
+    <div class="btn-container" style="display: inline-block;">
+        <a href="sidebar.html"><button >Thông tin chung</button></a>
+        <a href="contact.html"><button >Liên hệ</button></a>
+    </div>
+   </div> 
+    
+</body>
+<script>
+    const imgB = document.querySelector('.container img')
+    imgB.addEventListener("click", function(){
+        this.classList.toggle("active")
+    })
+    imgB.addEventListener('mouseout', (event) => {       
+        if (imgB.getAttribute("class") == "active") {
+            imgB.classList.toggle("active")
+        }
+        console.log(123)
+    });
+</script>
+</html>
+
+
+        <!-- <i class="fab fa-facebook" ></i>
+        <i class="fab fa-instagram" ></i>
+        <i class="fab fa-twitter" ></i> -->

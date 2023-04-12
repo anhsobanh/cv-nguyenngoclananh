@@ -1,0 +1,135 @@
+:root{
+  --bg1: purple;
+  --bg2: lightpink;
+  --bg: white;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header{
+  width: 350px;
+  height: 450px;
+  background: linear-gradient(var(--bg2), var(--bg1));
+  border-radius: 10px;
+}
+.side-nav{
+  width: 100px;
+  height: 450px;
+  background: linear-gradient(var(--bg1), var(--bg2));
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  
+}
+/* .logo{
+  display: block;
+  margin-bottom: 60px;
+  width: 1000px;
+  height: 600x;
+} */
+/* .logo-img{
+  width: 70px;
+  height: 25px;
+} */
+.nav-links{
+  list-style: none;
+  position: relative;
+}
+
+.nav-links li{
+  padding: 10px 0;
+}
+
+.nav-links li a{
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  display: flex;
+  font-size: small;
+  align-items: center;
+  transform: translateX(-35%);  
+}
+.nav-links li a i{
+  font-size: 22px;
+  margin-right: px;
+  transform: translateX(-60%); 
+}
+
+.active{
+  background: #fff;
+  width: 75px;
+  height: 40px;
+  position: absolute;
+  left: -48%;
+  top: 6%;
+  z-index: -1;
+  border-radius: 6px;
+  box-shadow: 0 5px rgba(255, 255, 255, 0.4);
+  display: none;
+  transition: top 0.2s;
+}
+
+.active1 {
+  background: #fff;
+  width: 75px;
+  height: 40px;
+  position: absolute;
+  left: -48%;
+  top: 6%;
+  z-index: -1;
+  border-radius: 6px;
+  box-shadow: 0 5px rgba(255, 255, 255, 0.4);
+  display: none;
+  transition-delay:  0.05s;
+}
+
+.nav-links .active-li a, .nav-links li:hover a{
+  color: purple;
+  transition: 0.3s;
+}
+.nav-links .active-li ~ .active1, .nav-links li:hover  ~ .active{
+  display: block;
+}
+.nav-links li:nth-child(1).active-li  ~ .active1, .nav-links li:nth-child(1):hover  ~ .active{
+  top: 6%;
+}
+.nav-links li:nth-child(2).active-li  ~ .active1, .nav-links li:nth-child(2):hover  ~ .active{
+  top: 40%;
+}
+.nav-links li:nth-child(3).active-li  ~ .active1, .nav-links li:nth-child(3):hover  ~ .active{
+  top: 73%;
+}
+.logo-icon{
+  display: none;
+  width: 45px;
+}
+.icon-back{
+  color: #ffffff;
+  font-size:xx-large;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 88%;
+  bottom: 88%;
+}
+
+#content {
+padding: 20px 10px 40px 110px;
+color: white; 
+}
+.header script{
+  line-height: 2;
+}

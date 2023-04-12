@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Thông tin chung</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+	<link rel="stylesheet" href="style-contact.css">
+	<script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+</head>
+<body>
+	<div class="contact">
+		<div class="contact__social--email">
+			<button class="open">
+				<i class='bx bx-envelope'></i>
+				EMAIL
+			</button>
+		</div>
+		<div class="contact__social--phone">
+			<button class="sdt">
+				<i class='bx bx-phone'></i>
+				PHONE NUMBER
+			</button>
+		</div>
+		<div>
+			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.0143820157737!2d105.7854584144081!3d21.07208779167481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aace09a5f469%3A0x64d14b49d8d3dcbf!2zTmcuIDQwMSDEkC4gWHXDom4gxJDhu4luaCwgcGjGsOG7nW5nIFh1w6JuIMSQ4buJbmgsIELhuq9jIFThu6sgTGnDqm0sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1679470690429!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		<div class="modal hide">
+			<div class="modal_inner">
+				<div class="modal__header">
+					<p>EMAIL</p>
+					<i class="fas fa-times"></i>
+				</div>
+				<div class="modal__body">
+					<h4>nguyenngoclananh2001yb@gmail.com</h4>
+				</div>
+				<div class="modal__mail">
+					<a href="mailto:nguyenngoclananh2001yb@gmail.com"><button>Gửi mail</button></a>
+				</div>
+				<div class="modal__footer">
+					<button>Đóng</button>
+				</div>
+			</div>
+			<div class="img">
+				<img src="—Pngtree—hand drawn character holding love_6467435.png" alt="ở đây">
+			</div>
+		</div>
+		<div class="modal1 hide">
+			<div class="modal1_inner">
+				<div class="modal1__header">
+					<p>SỐ ĐIỆN THOẠI</p>
+					<i class="fas fa-times"></i>
+				</div>
+				<div class="modal1__body">
+					<p><a href="tel:+0916951767">09 169 51767</a></p>
+				</div>
+				<div class="modal1__footer">
+					<button>Đóng</button>
+				</div>
+			</div>
+		</div> 
+	</div>
+	<div class="icon-back">
+		<a href="index.html"><i class="fas fa-chevron-left"></i></a>
+</div>
+
+<script>
+	let btnOpen = document.querySelector('.open')
+	let modal = document.querySelector('.modal')
+	let iconClose = document.querySelector('.modal__header i')
+	let btnClose = document.querySelector('.modal__footer button')
+
+	function toggleModal(e){
+		modal.classList.toggle('hide')
+	}
+
+	btnOpen.addEventListener('click',toggleModal)
+	btnClose.addEventListener('click',toggleModal)
+	iconClose.addEventListener('click',toggleModal)
+	modal.addEventListener('click', function(e){
+		if(e.target == e.currentTarget){
+			toggleModal()
+		}	
+})
+
+	let btnOpen1 = document.querySelector('.sdt')
+	let modal1 = document.querySelector('.modal1')
+	let iconClose1 = document.querySelector('.modal1__header i')
+	let btnClose1 = document.querySelector('.modal1__footer button')
+
+	function toggleModal1(a){
+		modal1.classList.toggle('hide')
+	}
+
+	btnOpen1.addEventListener('click',toggleModal1)
+	btnClose1.addEventListener('click',toggleModal1)
+	iconClose1.addEventListener('click',toggleModal1)
+	modal1.addEventListener('click', function(a){
+		console.log(1234)
+		if(a.target == a.currentTarget){
+			toggleModal1()
+		}	
+})
+
+
+</script>
+</body>
+</html>

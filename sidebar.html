@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin chung</title>
+    <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+    <link rel="stylesheet" href="style-sidebar.css">
+</head>
+<body>
+    <div class="header">
+        <div class="side-nav">
+            <a href="#"class="logo">
+                    <img src="" class="logo-img">
+            </a>
+            <ul class="nav-links ">
+                <li ><a href="#" onmouseover="changeText(1)" ><i class="fas fa-user-graduate"></i><p>Học vấn</p></a></li>
+                <li ><a href="#" onmouseover="changeText(2)" ><i class="fas fa-star"></i><p>Kĩ năng</p></a></li>
+                <li ><a href="#" onmouseover="changeText(3)" ><i class="fas fa-fire"></i><p>Hoạt động</p></a></li>
+                <div class="active"></div>
+                <div class="active1"></div>
+            </ul>
+        </div>
+        <div id="content"></div>
+        <script> 
+        changeText(1);
+            function changeText(idx) {
+                const arrLi = document.getElementsByTagName("li");
+                for(var i = 0; i < 3; i ++) {
+                    if (i == (idx-1)) {
+                        arrLi[i].setAttribute("class", "active-li")
+                    } else {
+                        arrLi[i].setAttribute("class", "")
+                    }
+                }
+                var content = ""
+                switch(idx) {
+                    case 1: 
+                    content =  
+                        "<br>"
+                        +"<br>"
+                        +"<br>"
+                        +"<h3>HỌC VẤN_____________</h3>"
+                        +"<br>"
+                        +"<h4>Trường đại học Nội vụ Hà Nội</h4>"
+                        +"<h4>Hệ thống thông tin</h4>"
+                        +"<h4>GPA: 3.5</h4>"
+                        +"<br><br>"
+                        +"<h3>__________THÀNH TÍCH</h3>"
+                        +"<br>"
+                        +"<h4>2021-2022: Học bổng loại Giỏi</h4>"
+                        +"<h4>2021-2022: Khen thưởng cấp Đoàn trường</h4>"
+                        +"<h4>2021: Chứng chỉ BKAD Pyhthon</h4>";
+                        break;
+                    case 2:
+                        content= 
+                            "<br>"
+                            +"<br>"
+                            +"<br>"
+                            +"<h4>Java</h4>"
+                            +"<h4>HTML</h4>"
+                            +"<h4>CSS</h4>"
+                            +"<h4>Javascrip</h4>"
+                            + "<h4>Python</h4>"
+                            +"<h4>Photoshop</h4>"
+                            +"<h4>Tin học văn phòng</h4>"
+                            +"<h4>Đọc hiểu Tiếng Anh</h4>";
+                        break;
+                    case 3:
+                        content= 
+                        "<br>"
+                        +"<br>"
+                        +"<br>"
+                        +"<h3>PHÓ BAN/ DESIGER</h3>"
+                        +"<h5>Ban truyền thông Trung tâm </h5>"
+                        +"<h6>- Lên kế hoạch tổ chức</h6>"
+                        +"<h6>- Thiết kế ấn phẩm</h6>"
+                        +"<br><br><br>"
+                        +"<h3>ỦY VIÊN </h3>"
+                        +"<h5>Ủy viên BCH Liên chi</h5>"
+                        +"<h6>- Hoạt động Đoàn trường</h6>"
+                        +"<br><br><br>"
+                        +"<h3>BAN TỔ CHỨC</h3" 
+                        +"<br><br>"
+                        +"<h5>Sự kiện Trung tâm</h5>"
+                        +"<h6>- Giải bóng đá</h6>"
+                        +"<h6>- Halloween</h6>";
+                        
+                        break;
+                }
+                document.getElementById("content").innerHTML = content ;
+            }
+        </script>  
+        <div class="icon-back">
+                <a href="index.html"><i class="fas fa-chevron-left"></i></a>
+        </div>
+    </div>
+</body>
+</html>
